@@ -6,6 +6,23 @@ import config from "../config";
 
 const router = express.Router();
 
+const authenticateToken = (req, res, next) => {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return res.status(401).json({ message: "Access denied. No token provided." });
+  }
+
+  const token = authHeader.split(" ")[1];
+  try {
+    const decoded = jwt.verify(token, config.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (err) {
+    res.status(401).json({ message: "Invalid token." });
+  }
+};
+
 router.post("/register", async (req, res) => {  
   try {
     const user = new User({
@@ -77,6 +94,13 @@ router.post("/signin", async (req, res) => {
   } catch (err) {    
     res.status(400).send(err.message);
   }
+});
+
+router.get("/getInfo", authenticateToken, (req, res) => {
+  res.send({
+    message: "User info retrieved successfully",
+    user: req.user
+  });
 });
 
 export default router;
