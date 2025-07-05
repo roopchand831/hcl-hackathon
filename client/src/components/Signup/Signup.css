@@ -1,0 +1,12 @@
+button {
+  border-style: none;
+  background-color: #1ab188;
+  outline-style: none;
+  padding: 12px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: 40%;
+  margin: 20px auto;
+}

@@ -1,0 +1,36 @@
+.patient-card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease-in-out;
+}
+
+.patient-card:hover {
+  transform: translateY(-10px);
+}
+
+.patient-card h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.patient-card p {
+  font-size: 1em;
+  color: #555;
+  margin: 8px 0;
+}
+
+.patient-card strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.patient-card .age {
+  color: #007BFF;
+}
+

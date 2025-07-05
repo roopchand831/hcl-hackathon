@@ -1,0 +1,24 @@
+.Layout {
+  background-color: #13232f;
+  width: 40%;
+  margin: 40px auto;
+  height: auto;
+}
+
+.Layout .navbar {
+  width: 100%;
+  margin: auto;
+}
+
+.Layout .navbar a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding: 12px;
+  background-color: #1ab188;
+  width: 40%;
+}
+.Layout .navbar a:hover {
+  color: crimson;
+}

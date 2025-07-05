@@ -1,0 +1,40 @@
+.provider-card {
+  width: 320px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  font-family: 'Helvetica', sans-serif;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.provider-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.provider-card h2 {
+  font-size: 1.6em;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.provider-card p {
+  font-size: 1em;
+  color: #7f8c8d;
+  margin: 10px 0;
+}
+
+.provider-card strong {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.provider-card .specialty {
+  color: #e74c3c; /* Red for specialty */
+}
+
+.provider-card .contact {
+  color: #3498db; /* Blue for contact info */
+}
