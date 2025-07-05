@@ -12,6 +12,7 @@ const ForbiddenPage = lazy(() => import("../../UI/Forbidden"));
 
 function Layout() {
   const isAuthenticated = localStorage.getItem('AceessTokenData');
+  const name = JSON.parse(localStorage.getItem('AceessTokenData') as string)?.name
 
   return (
     <BrowserRouter>
@@ -34,7 +35,7 @@ function Layout() {
               path="/patient"
               element={
                 <ProtectedRoute allowedRoles={["patient"]}>
-                  <Patient patient={{ name: "Patient name" }} />
+                  <Patient patient={{ name: name }} />
                 </ProtectedRoute>
               }
             />
@@ -42,7 +43,7 @@ function Layout() {
               path="/healthcareprovider"
               element={
                 <ProtectedRoute allowedRoles={["healthCareProvider"]}>
-                  <HealthCareProvider provider={{ name: "Health care provider name" }} />
+                  <HealthCareProvider provider={{ name: name}} />
                 </ProtectedRoute>
               }
             />
