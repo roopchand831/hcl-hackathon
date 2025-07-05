@@ -29,7 +29,7 @@ const register = (name, username, email, password, role) => async (dispatch) => 
       type: USER_REGISTER_SUCCESS,
       payload: data,
     });
-    console.log(data);
+    alert('registration success')
   } catch (error) {
     dispatch({ type: USER_REGISTER_FAIL, payload: error.message });
   }
@@ -45,6 +45,7 @@ const login = (email: string, password: string) => async (dispatch) => {
     });
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
     localStorage.setItem('AceessTokenData', JSON.stringify(data));
+    alert('login success')
     history.push(data.role)
   } catch (err) {
     dispatch({ type: USER_LOGIN_FAIL, payload: err.message });

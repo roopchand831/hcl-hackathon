@@ -4,7 +4,7 @@ import "./Login.css";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/actions/authActions";
 
-function Login(props) {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
